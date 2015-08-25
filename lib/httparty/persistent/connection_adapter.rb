@@ -28,6 +28,8 @@ module HTTParty::Persistent
         opts[:proxy].password = options[:http_proxypass] if options[:http_proxypass]
       end
 
+      require 'pp'
+      pp opts
       PersistentHTTP.new(opts)
     end
   end
